@@ -1,0 +1,92 @@
+{
+  "info": {
+    "_postman_id": "ce7bf71f-dcf4-4edf-b5bc-c8a6495c6711",
+    "name": "Hibernate Change Events Tests",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create a member",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"firstName\": \"David\",\n    \"lastName\": \"Price\",\n    \"emailId\": \"dprice@gmail.com\",\n    \"addresses\": [\n        {\n            \"street1\": \"2 Pelham Circle\",\n            \"street2\": \"\",\n            \"city\": \"Stratford\",\n            \"state\": \"CT\",\n            \"zip\": \"00431\"\n        }\n    ]\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/v1/members",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "members"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get all members",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/v1/members",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "members"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update a member",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"firstName\": \"Peter\",\n    \"lastName\": \"Parker\",\n    \"emailId\": \"pparker@gmail.com\",\n    \"addresses\": [\n        {\n            \"id\": 2,\n            \"street1\": \"3 Martin Ave\",\n            \"street2\": \"\",\n            \"city\": \"Stratford\",\n            \"state\": \"CT\",\n            \"zip\": \"00321\"\n        },\n        {\n            \"street1\": \"30 Park St\",\n            \"street2\": \"\",\n            \"city\": \"New York\",\n            \"state\": \"NY\",\n            \"zip\": \"00110\"\n        }\n    ]\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/v1/members/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "members",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "protocolProfileBehavior": {}
+}
